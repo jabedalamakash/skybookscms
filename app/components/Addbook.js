@@ -29,26 +29,24 @@ const AddBook = () => {
          category:"Uncategorized"})
     }
 
-    const deleteBtn=()=>{
-        const filterbook=bdata.filter((item)=>{
+    const deleteBtn=(id)=>{
+ 
+        const newBookData=bdata.filter((book)=>book.icbn !== id) ;
 
-            return  item.icbn !== idata.icbn;
-        })
-        setBdata(filterbook);
+        setBdata(newBookData);
+        
+        // alert(id);
+        
 
     }
 
 
     
- console.log("Data",bdata);
-
 
 
     return (
         <>
             <section className='w-ful px-5 mb-20 sm:px-0 sm:w-[80%] mx-auto'>
-
-                {/* <{Book main={bdata} title={bdata.title} id={bdata.id} name={bdata.author} category={bdata.category} /> */}
 
                         <Book data={bdata} handleDelete={deleteBtn}/>
 

@@ -39,7 +39,7 @@ return (
               </span>
               
               <span>
-                <button onClick={handleDelete}><FaTrash size={15}/></button>              
+                <button onClick={()=>handleDelete(book.icbn)}><FaTrash size={15}/></button>              
               </span>
 
               
