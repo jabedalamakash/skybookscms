@@ -42,8 +42,10 @@ const AddBook = () => {
         // get item
     useEffect(()=>{
         const data=localStorage.getItem('books');
-        setBdata(JSON.parse(data))
-
+        if(data){
+            setBdata(JSON.parse(data))
+        }
+    
      },[])
 
      // localStorage setItem
