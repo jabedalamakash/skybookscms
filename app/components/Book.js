@@ -6,7 +6,7 @@ const Book = ({data,handleDelete}) => {
 return (
  <div className='w-full px-5 mb-20 border-box sm:px-0 sm:w-[80%] mx-auto'>
 
-  {!data.length ? null : <>
+  {!data.length >0 ? null : <>
     <div className="overflow-x-auto bg-[#F3F4F8] px-5 py-10   sm:p-40 rounded-xl">
   <table className="table table-zebra">
     {/* head */}

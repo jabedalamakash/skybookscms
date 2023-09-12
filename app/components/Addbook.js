@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Book from './Book';
 
 const AddBook = () => {
@@ -39,6 +39,18 @@ const AddBook = () => {
         
 
     }
+        // get item
+    useEffect(()=>{
+        const data=localStorage.getItem('books');
+        setBdata(JSON.parse(data))
+
+     },[])
+
+     // localStorage setItem
+     useEffect(()=>{
+        localStorage.setItem('books', JSON.stringify(bdata));
+
+     },[bdata])
 
 
     
